@@ -95,10 +95,11 @@ const generator: FontGenerator = {
       .map(kind => ({ [kind]: true }))
       .reduce((prev, curr) => Object.assign(prev, curr), {});
 
-    const enumName = pascalCase(name);
-    const codepointsName = `${constantCase(name)}_CODEPOINTS`;
-    const literalIdName = `${pascalCase(name)}Id`;
-    const literalKeyName = `${pascalCase(name)}Key`;
+    const enumName = ts.enumName || pascalCase(name);
+    const codepointsName =
+      ts.constantName || `${constantCase(name)}_CODEPOINTS`;
+    const literalIdName = ts.literalId || `${pascalCase(name)}Id`;
+    const literalKeyName = ts.literalKey || `${pascalCase(name)}Key`;
     const names = { enumName, codepointsName, literalIdName, literalKeyName };
 
     const enumKeys = generateEnumKeys(Object.keys(assets));
