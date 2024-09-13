@@ -15,6 +15,7 @@ export declare type RunnerOptionalOptions = {
     };
     codepoints: CodepointsMap;
     fontHeight: number;
+    ascent: number;
     descent: number;
     normalize: boolean;
     round: number;

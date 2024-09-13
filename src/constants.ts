@@ -20,6 +20,7 @@ export const DEFAULT_OPTIONS: Omit<RunnerOptions, 'inputDir' | 'outputDir'> = {
   codepoints: {},
   round: undefined,
   fontHeight: 300,
+  ascent: undefined,
   descent: undefined,
   normalize: undefined,
   selector: null,

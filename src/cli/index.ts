@@ -93,6 +93,11 @@ const config = () => {
     )
 
     .option(
+      '--ascent <value>',
+      'the font ascent' + printDefaultOption('ascent' as any)
+    )
+    
+    .option(
       '--descent <value>',
       'the font descent' + printDefaultOption('descent' as any)
     )
@@ -144,6 +149,7 @@ const buildOptions = async (cmd: commander.Command, loadedConfig = {}) => {
       fontTypes: opts.fontTypes,
       assetTypes: opts.assetTypes,
       fontHeight: opts.fontHeight,
+      ascent: opts.ascent,
       descent: opts.descent,
       normalize: opts.normalize,
       round: opts.round,

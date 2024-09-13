@@ -48,6 +48,7 @@ Options:
   -t, --font-types <value...>  specify font formats to generate (default: eot, woff2, woff, available: eot, woff2, woff, ttf, svg)
   -g --asset-types <value...>  specify other asset types to generate (default: css, html, json, ts, available: css, scss, sass, html, json, ts)
   -h, --font-height <value>    the output font height (icons will be scaled so the highest has this height) (default: 300)
+  --ascent <value>             the font ascent
   --descent <value>            the font descent
   --normalize [bool]           normalize icons by scaling them to the height of the highest icon
   -r, --round [bool]           setup the SVG path rounding [10e12]
@@ -155,6 +156,7 @@ generateFonts({
   codepoints: {},
   fontHeight: 300,
   round: undefined, // --
+  ascent: undefined, // Will use `svgicons2svgfont` defaults
   descent: undefined, // Will use `svgicons2svgfont` defaults
   normalize: undefined, // --
   selector: null,

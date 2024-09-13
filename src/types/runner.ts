@@ -15,6 +15,7 @@ export type RunnerOptionalOptions = {
   pathOptions: { [key in AssetType]?: string };
   codepoints: CodepointsMap;
   fontHeight: number;
+  ascent: number;
   descent: number;
   normalize: boolean;
   round: number;
