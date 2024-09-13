@@ -8,6 +8,7 @@ const generator: FontGenerator<void> = {
   generate: ({
     name: fontName,
     fontHeight,
+    ascent,
     descent,
     normalize,
     assets,
@@ -21,6 +22,7 @@ const generator: FontGenerator<void> = {
       const fontStream = new SVGIcons2SVGFontStream({
         fontName,
         fontHeight,
+        ascent,
         descent,
         normalize,
         log: () => null,
