@@ -25,6 +25,7 @@ const CONFIG_VALIDATORS: {
   templates: [],
   codepoints: [],
   fontHeight: [optional(parseNumeric)],
+  ascent: [optional(parseNumeric)],
   descent: [optional(parseNumeric)],
   normalize: [optional(parseBoolean)],
   round: [optional(parseNumeric)],
